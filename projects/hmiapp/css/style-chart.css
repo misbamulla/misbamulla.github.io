@@ -1,0 +1,51 @@
+*,html{
+	padding: 0;
+	margin: 0;
+}
+
+h1{
+	text-align: center;
+}
+.highcharts-title{
+	font-weight: bolder;
+}
+	.highcharts-credits{
+	display: none;
+}
+.highcharts-range-selector-buttons{
+	display: none;
+}
+
+#critical{
+	color: red;
+}
+
+#medium{
+	color: orange;
+}
+
+#normal{
+	color: green;
+}
+
+#low{
+	color: purple;
+}
+
+/*.modal-content > #container{
+	
+}*/
+
+table {
+	margin-top: -70px;
+}
+
+@media only screen and (max-width: 500px) {
+	table{
+		margin-top: -170px;
+	}
+}
+
+/*.highcharts-yaxis-grid .highcharts-grid-line:nth-child(3n+3){
+	stroke: #ff0000;
+}*/

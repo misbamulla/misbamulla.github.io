@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head><title>::Contact::</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	</style>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+
+	<style>
+.article{
+		color:white;
+	}
+.h5{
+	color:white;
+}
+	</style>
+</head>
+<body><center>
+<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a target="blank" href="#" onclick="window.open('http://moodle.dbit.in/login/index.php', '_system');">Moodle</a></li>
+			<li><a href="branch.html">Branches</a></li>
+			
+			<li><a href="event.html">Events</a></li>
+			<li><a href="call.html">Call</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+		<a href="#" id="pull">Menu<img align="right|middle|top" hspace="20" vspace="10" style="float:right;vertical-align: text-bottom;" src="nav-icon.png"></a>
+	</nav>
+	<!-- Body starts -->
+	<h1 class="article">Contact Us</h1><hr>
+<p class="article"; align="left";>Our institute is situated on a large serene campus & can easily be reached from Vidyavihar (the closest station), Kurla and Ghatkopar stations of Central Railway and Santacruz stations of Western Railway. BEST Bus No. 322 plies between Vidyavihar(W) and Santacruz(E) station and stops just outside the institute, while several buses pass from the nearby junction - named 'Kamani'.</p>
+<p align="left"; class="article">Address:<br>
+Don Bosco Institute Of Technology
+Premier Automobiles Road, Opp. Fiat Company,
+Kurla (W), Mumbai- 400 070</p>
+<h2 class="article">Map for Guidance</h2>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5847376188603!2d72.88756018686833!3d19.08198705553325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x8d1745d15baac575!2sDon+Bosco+Institute+Of+Technology!5e0!3m2!1sen!2sin!4v1445792315047" width="100%" height="100%" frameborder="2%" style="border:0" allowfullscreen></iframe>
+</center>
+
+<p class="article">
+This is our email ID:
+<a class="article" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1#identifier?Subject=Enquiry" target="blank">dbit@dbit.in</a>
+</p>
+<p class="article">Fax no: 25040682</p>
+<p class="article">List of Telephone numbers: (Click to call)<br>
+	<center><a  class="article" href="tel:022-25042424">022-25042424</a><br>
+		<a  class="article" href="tel:022-25040508">022-25040508 </a><br>
+		<a  class="article" href="tel:022-25042018">022-25042018  </a><br>
+	</center>
+</p>
+</body>
+</html>

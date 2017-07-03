@@ -1,0 +1,134 @@
+.wrap {
+  padding: 40px;
+  text-align: center;
+}
+hr {
+  clear: both;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 0;
+  border-top: 1px solid #aaaaaa;
+}
+
+.btn {
+  background: #428bca;
+  border: #357ebd solid 1px;
+  border-radius: 570px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 30px;
+  position: relative;
+  transition: color .1s ease;
+  /* top: 40em;*/
+}
+.btn:hover {
+  background: #357ebd;
+}
+.btn.btn-big {
+  font-size: 18px;
+  padding: 8px 10px;
+  min-width: 30px;
+  margin-bottom: 10px;
+}
+.btn-close {
+  color: #aaaaaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.btn-close:hover {
+  color: #919191;
+}
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+
+}
+.modal:target:before {
+  display:block;
+}
+.modal:target .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  
+  top:1%;
+}
+.modal-dialog {
+  background: #fefefe;
+  border: #333333 solid 1px;
+  border-radius: 20px;
+  margin-left: -150px;
+ 
+  position:absolute;
+overflow:scroll;
+  left: 50%;
+  top: ;
+  z-index: 11;
+  width: 300px;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+
+  
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+.modal-header {
+  border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+  font-size: 20px;
+}
+.modal-footer {
+  border-top: #eeeeee solid 1px;
+  text-align: right;
+}
+/*ADDED TO STOP SCROLLING TO TOP*/
+#close {
+  display: none;
+}
+
+/* css for branches*/
+.row-padding{padding:0 8px}
+.row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:1px 8px}
+.row-padding:after{content:"";display:table;clear:both}
+.third{float:left;width:100%}
+.w3-third{width:99.99999%}
+@media only screen and (min-width:601px){\
+.third{width:33.33333%}
+}
+@media only screen and (min-width:993px){
+
+.third{width:33.33333%}
+}
+
+.third{padding:1px 8px}
+
+/* for circular imagge*/
+.img-circle {
+  border-radius: 50%;
+}

@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/Logo2.png" sizes="16x16" type="image/png">
+    <title>Home | Medi Assist</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style-chart.css"/>
+    <style>
+        .backgroundRed1{
+            background: red;
+        }
+        .backgroundRed2{
+            background: red;
+        }
+        .backgroundRed3{
+            background: red;
+        }
+        .backgroundRed4{
+            background: red;
+        }
+        .backgroundRed5{
+            background: red;
+        }
+        .backgroundRed6{
+            background: red;
+        }
+        .backgroundClear{
+            background: transparent;
+        }
+    </style>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/highstock.js"></script>
+    <script src="js/exporting.js"></script>
+    <script type="text/javascript">
+
+        startInterval1 = setInterval(function(){
+            $('#highlight1').toggleClass('backgroundRed1');
+        },1000);
+        startInterval2 = setInterval(function(){
+            $('#highlight2').toggleClass('backgroundRed2');
+        },2000);
+        startInterval3 = setInterval(function(){
+            $('#highlight3').toggleClass('backgroundRed3');
+        },4000);
+        startInterval4 = setInterval(function(){
+            $('#highlight4').toggleClass('backgroundRed4');
+        },6000);
+        startInterval5 = setInterval(function(){
+            $('#highlight5').toggleClass('backgroundRed5');
+        },8000);
+        startInterval6 = setInterval(function(){
+            $('#highlight6').toggleClass('backgroundRed6');
+        },10000);
+        
+ 
+            // stopInterval = clearInterval(function(){
+            //     $('#highlight').toggleClass('backgroundClear');
+            // });
+            
+            // var stopInterval = click('#stop_alert',function(){
+            //     $('#highlight').clearInterval(startInterval);     
+            // });
+            // $('html').toggleClass('backgroundClear');
+        
+        // $('#start_alert').toggleClass('backgroundRed');
+        // $('#stop_alert').toggleClass('backgroundClear');
+        // $('#start_alert').click(function(){
+        //     // clearInterval(startInterval);
+        //     $('#highlight').toggleClass('backgroundRed');
+        // });
+          
+    </script>
+    <!-- <script src="js/main.js"></script> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <!-- <i class="fa fa-play-circle"></i> --> <span class="light">PMK<!-- <img src="../images/Logo2new.png" height="70px"> --></span> Medicare
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <!--<button onclick="clearInterval(startInterval);" id="test">test</button>-->
+                    <li>
+                        <a class="#page-scroll" href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#wards"><i class="fa fa-bed" aria-hidden="true"></i>Wards</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#doctors"><i class="fa fa-user-md" aria-hidden="true"></i>Doctors</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#call"><i class="fa fa-phone" aria-hidden="true"></i>Call/SMS</a>
+                    </li>
+                    <li>
+                        <a class="#page-scroll" href="login.jsp"><i class="fa fa-lock" aria-hidden="true"></i>Logout</a>
+                    </li> 
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <!-- <h1 class="brand-heading">IoT Based Medi Assist</h1> -->
+                        <img src="img/Logo2new.png" height="90px" style="margin-top: 100px;"><br><br>
+                        <p class="intro-text">One stop for all your health needs.</p>
+                        <a href="#wards" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--<div id="divtoBlink" >asdasd</div>-->
+    <!-- About Section -->
+    <section id="wards" class="container content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12">
+                    <div id="highlight1" class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Ward 1</h3>    
+                        </div>
+
+                        <button id="start_alert" onclick="clearInterval(startInterval1);" type="button" class="btn btn-primary" data-toggle="modal" data-target="#w1" data-whatever="JUPITOR20171">View</button>
+                        <!--<button id="stop-alert" type="button" class="btn btn-primary">Stop</button>-->
+                        <div class="modal fade" id="w1" role="dialog">
+                            <div class="modal-dialog">
+                            
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Patient Details</h4>
+                                  <!-- <h5>JUPITOR20171</h5> -->
+                                  <textarea></textarea>
+                                </div>
+                                <div class="modal-body">
+                                  <div id="container" style="min-width: 550px; height: 500px; margin: 0 auto;"></div>
+                                  
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Line</th>
+                                        <th>Value</th>
+                                        <th>Condition</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td id="critical">----------</td>
+                                        <td>(Greater than 140)</td>
+                                        <td id="critical"><marquee>CRITICAL!!</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="medium">----------</td>
+                                        <td>(120 - 140)</td>
+                                        <td id="medium"><marquee>MEDIUM</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="normal">----------</td>
+                                        <td>(90-120)</td>
+                                        <td id="normal"><marquee>NORMAL or IDEAL</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="low">----------</td>
+                                        <td>(70-90)</td>
+                                        <td id="low"><marquee>LOW</marquee></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- <p>Some text in the modal.</p> -->
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- <button id="small" type="button" class="btn btn-primary">Small-View</button> -->
+                                  <!--<button type="button" id="button" class="autocompare btn btn-primary">Get Y axis extremes</button>-->
+                                  <button id="stop_alert" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12">
+                    <div id="highlight2" class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Ward 2</h3>    
+                        </div>
+
+                        <button type="button" onclick="clearInterval(startInterval2);" class="btn btn-primary" data-toggle="modal" data-target="#w1" data-whatever="JUPITOR20172">View</button>
+                        <div class="modal fade" id="w2" role="dialog">
+                            <div class="modal-dialog">
+                            
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Patient Details</h4>
+                                  <!-- <h5>JUPITOR20172</h5> -->
+                                  <textarea></textarea>
+                                  <p></p>
+                                </div>
+                                <div class="modal-body">
+                                  <div id="container" style="min-width: 550px; height: 500px; margin: 0 auto;"></div>
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Line</th>
+                                        <th>Value</th>
+                                        <th>Condition</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td id="critical">----------</td>
+                                        <td>(Greater than 140)</td>
+                                        <td id="critical"><marquee>CRITICAL!!</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="medium">----------</td>
+                                        <td>(120 - 140)</td>
+                                        <td id="medium"><marquee>MEDIUM</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="normal">----------</td>
+                                        <td>(90-120)</td>
+                                        <td id="normal"><marquee>NORMAL or IDEAL</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="low">----------</td>
+                                        <td>(70-90)</td>
+                                        <td id="low"><marquee>LOW</marquee></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- <p>Some text in the modal.</p> min-width: 570px height: 500px; -->
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- <button id="small" type="button" class="btn btn-primary">Small-View</button> -->
+                                  <!--<button type="button" id="button" class="autocompare btn btn-primary">Get Y axis extremes</button>-->
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12">
+                    <div id="highlight3" class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Ward 3</h3>    
+                        </div>
+
+                        <button type="button" onclick="clearInterval(startInterval3);" class="btn btn-primary" data-toggle="modal" data-target="#w1" data-whatever="JUPITOR20173">View</button>
+                        <div class="modal fade" id="w3" role="dialog">
+                            <div class="modal-dialog">
+                            
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Patient Details</h4>
+                                  <!-- <h5>JUPITOR20173</h5> -->
+                                  <textarea></textarea>
+                                </div>
+                                <div class="modal-body">
+                                  <div id="container" style="min-width: 550px; height: 500px; margin: 0 auto;"></div>
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Line</th>
+                                        <th>Value</th>
+                                        <th>Condition</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td id="critical">----------</td>
+                                        <td>(Greater than 140)</td>
+                                        <td id="critical"><marquee>CRITICAL!!</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="medium">----------</td>
+                                        <td>(120 - 140)</td>
+                                        <td id="medium"><marquee>MEDIUM</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="normal">----------</td>
+                                        <td>(90-120)</td>
+                                        <td id="normal"><marquee>NORMAL or IDEAL</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="low">----------</td>
+                                        <td>(70-90)</td>
+                                        <td id="low"><marquee>LOW</marquee></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- <p>Some text in the modal.</p> -->
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- <button id="small" type="button" class="btn btn-primary">Small-View</button> -->
+                                  <!--<button type="button" id="button" class="autocompare btn btn-primary">Get Y axis extremes</button>-->
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12"><br><br><br><br>
+                    <div id="highlight4" class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Ward 4</h3>    
+                        </div>
+
+                        <button type="button" onclick="clearInterval(startInterval4);" class="btn btn-primary" data-toggle="modal" data-target="#w1" data-whatever="JUPITOR20174">View</button>
+                        <div class="modal fade" id="w4" role="dialog">
+                            <div class="modal-dialog">
+                            
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Patient Details</h4>
+                                  <!-- <h5>JUPITOR20174</h5> -->
+                                  <textarea></textarea>
+                                </div>
+                                <div class="modal-body">
+                                  <div id="container" style="min-width: 550px; height: 500px; margin: 0 auto;"></div>
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Line</th>
+                                        <th>Value</th>
+                                        <th>Condition</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td id="critical">----------</td>
+                                        <td>(Greater than 140)</td>
+                                        <td id="critical"><marquee>CRITICAL!!</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="medium">----------</td>
+                                        <td>(120 - 140)</td>
+                                        <td id="medium"><marquee>MEDIUM</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="normal">----------</td>
+                                        <td>(90-120)</td>
+                                        <td id="normal"><marquee>NORMAL or IDEAL</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="low">----------</td>
+                                        <td>(70-90)</td>
+                                        <td id="low"><marquee>LOW</marquee></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- <p>Some text in the modal.</p> -->
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- <button id="small" type="button" class="btn btn-primary">Small-View</button> -->
+                                  <!--<button type="button" id="button" class="autocompare btn btn-primary">Get Y axis extremes</button>-->
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12"><br><br><br><br>
+                    <div id="highlight5" class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Ward 5</h3>    
+                        </div>
+
+                        <button type="button" onclick="clearInterval(startInterval5);" class="btn btn-primary" data-toggle="modal" data-target="#w1" data-whatever="JUPITOR20175">View</button>
+                        <div class="modal fade" id="w5" role="dialog">
+                            <div class="modal-dialog">
+                            
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Patient Details</h4>
+                                  <!-- <h5>JUPITOR20175</h5> -->
+                                  <textarea></textarea>
+                                </div>
+                                <div class="modal-body">
+                                  <div id="container" style="min-width: 550px; height: 500px; margin: 0 auto;"></div>
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Line</th>
+                                        <th>Value</th>
+                                        <th>Condition</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td id="critical">----------</td>
+                                        <td>(Greater than 140)</td>
+                                        <td id="critical"><marquee>CRITICAL!!</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="medium">----------</td>
+                                        <td>(120 - 140)</td>
+                                        <td id="medium"><marquee>MEDIUM</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="normal">----------</td>
+                                        <td>(90-120)</td>
+                                        <td id="normal"><marquee>NORMAL or IDEAL</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="low">----------</td>
+                                        <td>(70-90)</td>
+                                        <td id="low"><marquee>LOW</marquee></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- <p>Some text in the modal.</p> -->
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- <button id="small" type="button" class="btn btn-primary">Small-View</button> -->
+                                  <!--<button type="button" id="button" class="autocompare btn btn-primary">Get Y axis extremes</button>-->
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                  <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12"><br><br><br><br>
+                    <div id="highlight6" class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Ward 6</h3>    
+                        </div>
+
+                        <button type="button" onclick="clearInterval(startInterval6);" class="btn btn-primary" data-toggle="modal" data-target="#w1" data-whatever="JUPITOR20176">View</button>
+                        <div class="modal fade" id="w6" role="dialog">
+                            <div class="modal-dialog">
+                            
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Patient Details</h4>
+                                  <!-- <h5>JUPITOR20176</h5> -->
+                                  <textarea></textarea>
+                                </div>
+                                <div class="modal-body">
+                                  <div id="container" style="min-width: 550px; height: 500px; margin: 0 auto;"></div>
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Line</th>
+                                        <th>Value</th>
+                                        <th>Condition</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td id="critical">----------</td>
+                                        <td>(Greater than 140)</td>
+                                        <td id="critical"><marquee>CRITICAL!!</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="medium">----------</td>
+                                        <td>(120 - 140)</td>
+                                        <td id="medium"><marquee>MEDIUM</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="normal">----------</td>
+                                        <td>(90-120)</td>
+                                        <td id="normal"><marquee>NORMAL or IDEAL</marquee></td>
+                                      </tr>
+                                      <tr>
+                                        <td id="low">----------</td>
+                                        <td>(70-90)</td>
+                                        <td id="low"><marquee>LOW</marquee></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- <p>Some text in the modal.</p> -->
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- <button id="small" type="button" class="btn btn-primary">Small-View</button> -->
+                                  <!--<button type="button" id="button" class="autocompare btn btn-primary">Get Y axis extremes</button>-->
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div><!-- End of Row -->          
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Grayscale</h2>
+                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+            </div>
+        </div> -->
+
+    </section>
+
+    <!-- Download Section -->
+    <!-- <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="doctors" class="container content-section text-center">        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#">
+                            <img class="img-responsive" src="img/d1.jpeg" alt="" width="200" height="200">
+                        </a><br>
+                        <h3>
+                            <a href="#">Dr. Peter</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p> -->
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#">
+                            <img class="img-responsive" src="img/d2.jpeg" alt="" width="200" height="200">
+                        </a><br>
+                        <h3>
+                            <a href="#">Dr. Michael</a>
+                        </h3>
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>-->
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#">
+                            <img class="img-responsive" src="img/d3.jpeg" alt="" width="200" height="200">
+                        </a><br>
+                        <h3>
+                            <a href="#">Dr. James</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p> -->
+                    </div>
+                    <div class="row">
+                        <br><br><br><br>
+                        <div class="col-md-4 portfolio-item">
+                            <a href="#">
+                                <img class="img-responsive" src="img/n1.jpeg" alt="" width="200" height="200">
+                            </a><br>
+                            <h3>
+                                <a href="#">Hazel</a>
+                            </h3>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p> -->
+                        </div>
+                        <div class="col-md-4 portfolio-item">
+                            <a href="#">
+                                <img class="img-responsive" src="img/n2.jpeg" alt="" width="200" height="200">
+                            </a><br>
+                            <h3>
+                                <a href="#">Catalina</a>
+                            </h3>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p> -->
+                        </div>
+                        <div class="col-md-4 portfolio-item">
+                            <a href="#">
+                                <img class="img-responsive" src="img/n3.jpeg" alt="" width="200" height="200">
+                            </a><br>
+                            <h3>
+                                <a href="#">Pamela</a>
+                            </h3>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p> -->
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        <!-- <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    </section>
+
+    <section id="call" class="container content-section text-center">
+        <div class="container">
+                <div class="col-md-6">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" style="margin-top: -5px;" type="button" data-toggle="dropdown"> CALL DOCTORS
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                         <li><a href="tel:91-902-919-0787">DR.Peter</a></li>
+                         <li><a href="tel:91-993-085-7898">DR.Michael</a></li>
+                         <li><a href="tel:91-959-463-7262">DR.James</a></li>
+                        </ul>
+                    </div><br><br>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" style="margin-top: -5px;" type="button" data-toggle="dropdown">SMS DOCTORS
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="sms:91-902-919-0787">DR.Peter</a></li>
+                            <li><a href="sms:91-993-085-7898">DR.Michael</a></li>
+                            <li><a href="sms:91-959-463-7262">DR.James</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" style="margin-top: -5px;" type="button" data-toggle="dropdown">CALL NURSES
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                         <li><a href="tel:91-902-919-0787">Hazel</a></li>
+                         <li><a href="tel:91-993-085-7898">Catalina</a></li>
+                         <li><a href="tel:91-959-463-7262">Pamela</a></li>
+                        </ul>
+                    </div><br><br>                   
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" style="margin-top: -5px;" type="button" data-toggle="dropdown">SMS NURSES
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="sms:91-902-919-0787">Hazel</a></li>
+                            <li><a href="sms:91-993-085-7898">Catalina</a></li>
+                            <li><a href="sms:91-959-463-7262">Pamela</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                     
+                </div>
+    </section>
+
+    <!-- Map Section -->
+    <!-- <div id="map"></div> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; P.M.K. 2017</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <!-- <script src="vendor/jquery/jquery.js"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/grayscale.min.js"></script>
+    <script type="text/javascript">
+      $('#w1').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget); // Button that triggered the modal
+          var recipient = button.data('whatever'); // Extract info from data-* attributes
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this);
+          // modal.find('.modal-title').text('New message to ' + recipient)
+          modal.find('.modal-header textarea').val(recipient);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head><title>::Branches::</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_new.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/style5.css" />
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+<body><center>
+<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a target="blank" href="#" onclick="window.open('http://moodle.dbit.in/login/index.php', '_system');">Moodle</a></li>
+			<li><a href="branch.html">Branches</a></li>
+			<li><a href="event.html">Events</a></li>
+			<li><a href="call.html">Call</a></li>
+			<li><a href="contact.html">Contact Us</a></li>	
+		</ul>
+		<a href="#" id="pull">Menu<img align="right|middle|top" hspace="20" vspace="10" style="float:right;vertical-align: text-bottom;" src="nav-icon.png"></a>
+	</nav>
+
+	<!-- Bodystarts -->
+	
+
+	<div class="container">
+		
+			
+			
+			<header>
+			
+				<h1><strong>Branches</strong></h1>
+				<h2>Choose your favourite</h2>
+				
+				
+				
+				
+				
+			</header>
+			
+			<section class="main">
+			
+				<ul class="ch-grid">
+					<li>
+						<div class="ch-item ch-img-1">				
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-1"></div>
+									<div class="ch-info-back">
+										<a href="comp.html"><h3>Computer</h3></a>
+										<a href="comp.html"><p>Learn to code</p></a>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ch-item ch-img-2">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-2"></div>
+									<div class="ch-info-back">
+										<a href="mech.html"><h3>Mechanical</h3></a>
+										<a href="mech.html"><p>Let's play with Machines</p></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ch-item ch-img-3">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-3"></div>
+									<div class="ch-info-back">
+										<a href="it.html"><h3>Information Technology</h3></a>
+										<a href="it.html"><p>Explore the Tech-World</p></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item ch-img-4">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-4"></div>
+									<div class="ch-info-back">
+										<a href="extc.html"><h3>EXTC</h3></a>
+										<a href="extc.html"><p>Make life Simple</p></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				
+			</section>
+        </div>
+</center>
+</body>
+</html>

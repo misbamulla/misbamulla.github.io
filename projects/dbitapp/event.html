@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head><title>::Events::</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/css_for_event.css">
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+
+	<script>
+$(document).ready(function(){
+  var animTime = 300,
+      clickPolice = false;
+  
+  $(document).on('touchstart click', '.acc-btn', function(){
+    if(!clickPolice){
+       clickPolice = true;
+      
+      var currIndex = $(this).index('.acc-btn'),
+          targetHeight = $('.acc-content-inner').eq(currIndex).outerHeight();
+   
+      $('.acc-btn h1').removeClass('selected');
+      $(this).find('h1').addClass('selected');
+      
+      $('.acc-content').stop().animate({ height: 0 }, animTime);
+      $('.acc-content').eq(currIndex).stop().animate({ height: targetHeight }, animTime);
+
+      setTimeout(function(){ clickPolice = false; }, animTime);
+    }
+    
+  });
+  
+});
+</script>
+</head>
+<body><center>
+<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a target="blank" href="#" onclick="window.open('http://moodle.dbit.in/login/index.php', '_system');">Moodle</a></li>
+			<li><a href="branch.html">Branches</a></li>
+      
+			<li><a href="event.html">Events</a></li>
+			<li><a href="call.html">Call</a></li>
+			<li><a href="contact.html">Contact Us</a></li>	
+		</ul>
+		<a href="#" id="pull">Menu<img align="right|middle|top" hspace="20" vspace="10" style="float:right;vertical-align: text-bottom;" src="nav-icon.png"></a>
+	</nav><br>
+<!-- bodystarts -->
+<header>
+			
+				<h1 style="font-size:30px;"><strong>Recent Events</strong></h1><hr>
+				
+</header><br>
+<div class="acc-container">
+<div class="acc-btn"><h1>Cultural Fest: Crextal</h1></div>
+<div class="acc-content">
+  <div class="acc-content-inner">
+    <p>The annual cultural festival of the college is called as "CreXtal" which stands for Creativity, Excellence and Talent.</p>
+  </div>
+</div>
+
+<div class="acc-btn"><h1>Technical Fest: Colosseum</h1></div>
+<div class="acc-content">
+  <div class="acc-content-inner">
+    <p>Theme: EColosseum Adventure Park
+        Inter-college event<br>
+        1)  Mega event (Ambivalence)<br>
+ 2)  Surprise Event (Haunted House)<br>
+ 3)  Technical Quiz (Ecobyte)<br>
+ 4)  PC Doctor<br>
+ 5)  Neon Cricket<br>
+ 6)  Neon Table Tennis<br>
+ 7)  Linfomatrix<br>
+ 8)  Robolympics<br>
+ 9)  LAN Gaming<br>
+ 10) Code-Decode<br>
+11) Android Workshop and App Development<br>
+12) Robinhood Adventures<br>
+And many more...
+</p>
+  </div>
+</div>
+
+<div class="acc-btn"><h1> Student Council</h1></div>
+<div class="acc-content">
+  <div class="acc-content-inner">
+    <div id="buttons"><a href="stc.html" class="btn blue">View Members</a></div>
+  </div>
+</div>
+
+<div class="acc-btn"><h1>ICTSD</h1></div>
+<div class="acc-content">
+  <div class="acc-content-inner">
+    <p><strong>Event Start Date:</strong>Wednesday, February 4, 2015<br>
+<strong>Event End Date:</strong>Friday, February 6, 2015<br><br>
+&nbsp;To mark the bicentenary of Don Bosco's birth in 2015, The Don Bosco Institute of Technology(DBIT), India, together with IEEE India, is hosting this International Conference on Technologies for Sustainable Development and calling for research papers in the nine streams listed here - Energy, Design, Water, Agriculture, Waste management, Transportation, Natural capital, Habitat and Green Skills.The goal of the conference and the exhibition is to mobilize, encourage, and use scientific knowledge and research in different technologies that help us live sustainable lives. We believe it is extremely important that we expose and train our youth in these new emerging technologies and teach our youth new skills in living sustainable lives. We invite you to participate. All are welcome.
+</p>
+  </div>
+</div>
+
+
+<div class="acc-btn"><h1><a style="text-decoration:none;color:white;" href="nss.html">NSS</a></h1></div>
+
+
+</div>
+
+
+</center>
+</body>
+</html>

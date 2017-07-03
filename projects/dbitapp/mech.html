@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head><title>::Computer::</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+
+	<style>
+	.article1{
+		color:white ;
+
+	}
+	/*for accordion*/
+	article.accordion
+{
+	display: inline-block;
+	width: 16em;
+	padding: 0.1em 0.1em 0.1px 0.1em;
+	margin: 0 auto;
+	background-color:white;
+	border-radius: 5px;
+	box-shadow: 0 0.1px 0.1px rgba(0,0,0,0.3);
+	vertical-align: left;
+}
+
+article.accordion section
+{
+	display: block;
+	width: 16em;
+	height: 2em;
+	padding: 0 0.01em;
+	margin: 0 0 0.1em 0;
+	color: #333;
+	background-color:blue;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+article.accordion section:hover{
+	background-color:orange;
+}
+
+article.accordion section h2
+{
+	font-size: 1em;
+	font-weight: bold;
+	width: 100%;
+	line-height: 2em;
+	padding: 0;
+	margin: 0;
+	color: #ddd;
+}
+
+article.accordion section h2 a
+{
+	display: block;
+	width: 100%;
+	line-height: 2em;
+	text-decoration: none;
+	color: inherit;
+	outline: 0 none;
+}
+article.accordion section:target
+{
+	height: 20em;
+	background-color: #fff;
+}
+
+article.accordion section:target h2
+{
+	font-size: 1.6em;
+	color: #333;
+}
+article.accordion section,
+article.accordion section h2
+{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.u_l{
+	width:200px;
+    margin:0 auto;
+    text-align:left;
+}
+.u_l{
+    width: 200px;
+}
+
+.list {
+    list-style-type: none;
+
+}
+
+.list li{
+    list-style-type: none;
+    position: relative;
+    padding-left: 5px;
+}
+.list li:before{
+    content: ' ';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #eee;
+    border: solid 1px #aaa;
+    position: absolute;
+    top: 3px;
+    left: -15px;
+}
+
+.small{
+	font-size: 10px;
+	color:white;
+	font-weight: 12px;
+	font-family:times; 
+}
+
+	</style>
+</head>
+<body><center>
+<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a target="blank" href="#" onclick="window.open('http://moodle.dbit.in/login/index.php', '_system');">Moodle</a></li>
+			<li><a href="branch.html">Branches</a></li>
+			
+			<li><a href="event.html">Events</a></li>
+			<li><a href="call.html">Call</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+		<a href="#" id="pull">Menu<img align="right|middle|top" hspace="20" vspace="10" style="float:right;vertical-align: text-bottom;" src="nav-icon.png"></a>
+	</nav>
+<!-- Bodystarts -->
+<h1 class="class_h1" style="font-size:30px;">Mechanical Department</h1>
+<hr>
+<p class="article1">Mechanical Engineering is one of the core engineering disciplines which deals with design and production of tools, machines and all other mechanical equipment to be used in industries.  Mechanical engineering is concerned with all types of machinery in industries and all aspects of their construction and functioning; the design, development, manufacturing, installation, operation and maintenance.</p>
+<article class="accordion">
+
+	<section id="acc1">
+		<h2><a href="#acc1">Semester One</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Applied Mathematics - I</li>
+  <li>Applied Physics I</li>
+  <li>Applied Chemistry I</li>
+  <li>Engineering Mechanics</li>
+  <li>Basic Electrical & Electronics Engineering</li>
+  <li>Environmental Studies</li>
+  <li>Basic Workshop Practice - I</li>
+</ul>  
+
+</p>
+	</section>
+	
+	<section id="acc2">
+		<h2><a href="#acc2">Semester Two</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Applied Mathematics - II</li>
+  <li>Applied Physics II</li>
+  <li>Applied Chemistry II</li>
+  <li>Engineering Drawing</li>
+  <li>Structured Programming Approach</li>
+  <li>Communication Skills</li>
+  <li>Basic Workshop Practice - II</li>
+</ul>  
+
+</p>
+
+	</section>
+	
+	<section id="acc3">
+		<h2><a href="#acc3">Semester Three</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Applied Mathematics - III</li>
+  <li>Strength of Materials</li>
+  <li>Machine Drawing</li>
+  <li>Production Process - I</li>
+  <li>Thermodynamics</li>
+  <li>Presentation and Communication Techniques</li>
+  <li>Machine Shop Practice - I<li>
+</ul>  
+
+</p>
+	</section>
+	
+	<section id="acc4">
+		<h2><a href="#acc4">Semester Four</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Applied Mathematics - IV</li>
+  <li>Theory of Machines - I</li>
+  <li>Thermal Engineering</li>
+  <li>Production Processes - II</li>
+  <li>Material Technology</li>
+  <li>Industrial Electronics</li>
+  <li>Machine Shop Practice - II</li>
+</ul>  
+
+</p>
+	</section>
+	
+	<section id="acc5">
+		<h2><a href="#acc5">Semester Five</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Mechanical Measurements & Metrology</li>
+  <li>Theory of Machines - II</li>
+  <li>Fluid Mechanics</li>
+  <li>Heat and Mass Transfer</li>
+  <li>Graphics User Interface Data Base Management</li>
+  <li>Environmental Studies</li>
+</ul>  
+
+</p>
+	</section>
+
+	<section id="acc6">
+		<h2><a href="#acc6">Semester Six</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Mechatronics</li>
+  <li>Hydraulic Machinery</li>
+  <li>Mechanical Vibrations</li>
+  <li>E -Commerce and Industrial Finance</li>
+  <li>Internal Combustion Engines</li>
+  <li>Machine Design-I</li>
+</ul>  
+
+</p>
+	</section>
+
+	<section id="acc7">
+		<h2><a href="#acc7">Semester Seven</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Machine Design-II</li>
+  <li>CAD/CAM /CIM</li>
+  <li>Refrigeration and Airconditioning</li>
+  <li>Manufacturing Planning & Control</li>
+  <li>Elective - I</li>
+  <li>Project</li>
+</ul>  
+
+</p>
+	</section>
+
+	<section id="acc8">
+		<h2><a href="#acc8">Semester Eight</a></h2>
+		<p class="u_l"><ul class="list u_l">
+  <li>Automobile Engineering</li>
+  <li>Finite Element Analysis</li>
+  <li>Industrial Engineering & Enterprise Resource Planning</li>
+  <li>Elective - II</li>
+  <li>Project</li>
+  
+</ul>  
+
+</p>
+	</section>
+
+</article>
+	<h3 class="class_h1">Syllabus According To Mumbai University</h3><p class="small"><i>Click to Download</i></p>
+	<ul class="u_l">
+		<li><a class="class_h1" style="text-decoration:none" href="#" onclick="window.open('https://drive.google.com/folderview?id=0B-oP9ZPCe_f7ZjdIdmdmb2U5UTA&usp=sharing', '_system');">FE Mech Syllabus</a></li>
+		<li><a class="class_h1" style="text-decoration:none" href="#" onclick="window.open('https://drive.google.com/folderview?id=0B-oP9ZPCe_f7ZGMwRkkwOFVuNUU&usp=sharing', '_system');">SE Mech Syllabus</a></li>
+		<li><a class="class_h1" style="text-decoration:none" href="#" onclick="window.open('https://drive.google.com/folderview?id=0B-oP9ZPCe_f7cXNUSTZ6VlFucW8&usp=sharing', '_system');">TE Mech Syllabus</a></li>
+		<li><a class="class_h1" style="text-decoration:none" href="#" onclick="window.open('https://drive.google.com/folderview?id=0B-oP9ZPCe_f7OFdxaGRrMmUxMUU&usp=sharing', '_system');">BE Mech Syllabus</a></li>
+	</ul>
+<br>
+</center>
+</body>
+</html>

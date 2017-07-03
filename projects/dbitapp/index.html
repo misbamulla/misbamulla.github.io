@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Home Page::</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_new.css">
+	
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+<body ><center>
+	<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a target"_blank" href="" onclick="window.open('http://moodle.dbit.in/login/index.php', '_system');">Moodle</a></li>
+			<li><a href="branch.html">Branches</a></li>
+			
+			<li><a href="event.html">Events</a></li>
+			<li><a href="call.html">Call</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+		<a href="#" id="pull">Menu<img align="right|middle|top" hspace="20" vspace="10" style="float:right;vertical-align: text-bottom;" src="nav-icon.png"></a>
+	</nav>
+	<!-- Body starts -->
+	<h1 class="class_h1">Welcome to DBIT APP</h1>
+	<div class="hvr-radial-out"><picture>
+		<source
+			media="(min-width: 650px)"
+			srcset="img/DBIT_logo.png">
+		<source
+				media="(min-width: 400px)"
+				srcset="img/DBIT_logo.png">
+		<img src="img/DBIT_logo.png" style="width:100px;height:100px;border-radius:100%;"></picture></div>
+<div class="city background">
+	<div class="transbox">
+  <h2 class="class_h2">Don Bosco Institute of Technology</h2>
+  <p>DBIT will be known to have an innovative, enjoyable and holistic learning environment that enhances individual success, the Don Bosco way. We seek to make DBIT the preferred choice of students, employers hiring engineering graduates and practitioners seeking further education.</p>
+ <a href="#modal-one" class="btn btn-big">Read More</a>
+</div>
+</div>
+<!-- model -->
+<div class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h2>More Information on DBIT</h2>
+      <a href="#close" class="btn-close" aria-hidden="true">X</a> <!--CHANGED TO "#close"-->
+    </div>
+    <div class="modal-body">
+      <p><h4>What is our vision?</h4>
+DBIT will be known to have an innovative, enjoyable and holistic learning environment that enhances individual success, the Don Bosco way. We seek to make DBIT the preferred choice of students, employers hiring engineering graduates and practitioners seeking further education.
+
+We aim to provide service in the best tradition of Don Bosco, by seeking to develop entrepreneurial attitude and social commitment in every student we train. DBIT will make a contribution to society through its educative process in a diverse and stimulating learning environment wherein students, faculty and staff can strive and grow.
+</p>
+    </div>
+    <div class="modal-footer">
+      <a href="index.html" class="btn">Ok</a>  <!--CHANGED TO "#close"-->
+    </div>
+    </div>
+  </div>
+
+
+</center>
+</body>
+</html>

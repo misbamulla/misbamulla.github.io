@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.acc-container {
+  width: 100%;
+  margin: 0px auto 0 auto;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.acc-btn {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1px 1px;
+  cursor: pointer;
+  background: #34495E;
+  border-bottom: 1px solid #2C3E50;
+}
+
+.acc-content {
+  height: 0px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #2C3E50;
+}
+
+.acc-content-inner {
+  padding: 1px;
+}
+
+.open {
+  height: auto;
+}
+
+h1 {
+  font: 700 20px/26px 'Lato', sans-serif;
+  color: #ffffff;
+}
+
+p {
+  font: 400 16px/24px 'Lato', sans-serif;
+  color:white;
+}
+
+.selected {
+  color: #1ABC9C;
+}
+
+/* for view members link*/
+#buttons {
+  padding-top: 5px;
+  text-align: center;
+}
+
+/* start da css for da buttons */
+.btn {
+  border-radius: 9px;
+  padding: 15px 25px;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 10px;
+  color:white;
+  position: relative;
+  display: inline-block;
+}
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.blue:hover {
+  background-color: #6FC6FF;
+}
