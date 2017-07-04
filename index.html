@@ -313,7 +313,10 @@
 
             </div>
         </div>
-        <a id="to-top" href="#homeHeading" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" 
+  role="button" title="Back to Top" data-toggle="tooltip" data-placement="top">
+  <span class="glyphicon glyphicon-chevron-up"></span>
+</a>
     </section>
 
     <!-- jQuery -->
@@ -330,75 +333,42 @@
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
 
-    <!-- #to-top button appears after scrolling -->
+    <!-- scroll to top -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    .back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    display:none;
+    }
+    </style>
+
     <script type="text/javascript">
-    var fixed = false;
-
-    $(document).scroll(function() {
-
-    if ($(this).scrollTop() > 250) {
-
-    if (!fixed) {
-
-    fixed = true;
-
-    // $('#to-top').css({position:'fixed', display:'block'});
-
-    $('#to-top').show("slow", function() {
-
-    $('#to-top').css({
-
-    position: 'fixed',
-
-    display: 'block'
-
-    });
-
-    });
-
-    $('#anime-arrow').hide("slow", function() {
-
-    $('#anime-arrow').css({
-
-    display: 'none'
-
-    });
-
-    });
-
-    }
-
-    } else {
-
-    if (fixed) {
-
-    fixed = false;
-
-    $('#to-top').hide("slow", function() {
-
-    $('#to-top').css({
-
-    display: 'none'
-
-    });
-
-    });
-
-    $('#anime-arrow').show("slow", function() {
-
-    $('#anime-arrow').css({
-
-    display: 'block'
-
-    });
-
-    });
-
-    }
-
-    }
-
-    });</script>
+    $(document).ready(function(){
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        
+        $('#back-to-top').tooltip('show');
+});
+</script>
+   
 </body>
 
 </html>
